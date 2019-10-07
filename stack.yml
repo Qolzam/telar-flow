@@ -1,0 +1,11 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:31112
+functions:
+  flow:
+    lang: golang-middleware
+    handler: ./flow
+    image: qolzam/flow:0.11
+    environment:
+      data: '[{"funcName": "micro1"}, {"funcName": "micro2"}, {"funcName": "micro3"}, {"funcName": "micro2"}]'
