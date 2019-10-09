@@ -9,3 +9,5 @@ functions:
     image: qolzam/flow:0.11
     environment:
       data: '[{"funcName": "micro1"}, {"funcName": "micro2"}, {"funcName": "micro3"}, {"funcName": "micro2"}]'
+    labels:
+      com.telar.cloud.func-type: flow
